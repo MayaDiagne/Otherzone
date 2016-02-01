@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Other Zone</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="landing">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Otherzone</a></h1>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Other Zone</h2>
+							<p style="color: white;">A simple photo blog<br />
+							With your photos and videos<br />
+							crafted by T.C.</p>
+							<ul class="actions">
+								<li><a id="modal_trigger" href="#modal" class="button special">Sign In</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<div id="modal" class="popupContainer" style="display:none;">
+					<header class="popupHeader">
+						<span class="header_title">Login</span>
+						<span class="modal_close"><i class="fa fa-times"></i></span>
+					</header>
+
+				    <section class="popupBody">
+							<div class="user_login">
+						    <form>
+						        <label style="color: black;">Email / Username</label> <input type="text"><br>
+						        <label style="color: black;">Password</label> <input type="password"><br>
+
+						        <div class="checkbox">
+						            <input id="remember" type="checkbox"> <label style="color: black;" for=
+						            "remember">Remember me on this computer</label>
+						        </div>
+
+						        <div class="action_btns">
+						            <div class="one_half">
+						                <a class="btn signup_btn" href="#">Sign-Up</a>
+						            </div>
+
+						            <div class="one_half last">
+						                <a class="btn btn_red" href="#">Login</a>
+						            </div>
+						        </div>
+						    </form>
+						    
+						    <a class="forgot_password" href="#">Forgot password?</a>
+						</div>
+						<div class="user_register">
+					    <form>
+					        <label style="color: black;">Full Name</label> <input type="text"><br>
+					        <label style="color: black;">Email Address</label> <input type="email"><br>
+					        <label style="color: black;">Password</label> <input type="password"><br>
+
+					        <div class="checkbox">
+					            <input id="send_updates" type="checkbox"> <label for=
+					            "send_updates">Send me occasional email updates</label>
+					        </div>
+
+					        <div class="action_btns">
+					            <div class="one_half">
+					                <a class="btn back_btn" href="#">Back</a>
+					            </div>
+
+					            <div class="one_half last">
+					                <a class="btn btn_red" href="#">Register</a>
+					            </div>
+					        </div>
+					    </form>
+					</div>
+				    </section>
+				</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script type="text/javascript" src="assets/js/jquery.leanModal.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+
+				$(function(){
+
+					// Calling Register Form
+					$(".signup_btn").click(function(){
+						$(".user_login").hide();
+						$(".user_register").show();
+						$(".header_title").text('Register');
+						return false;
+					});
+
+					// Going back to Social Forms
+					$(".back_btn").click(function(){
+						$(".user_login").show();
+						$(".user_register").hide();
+						$(".header_title").text('Login');
+						return false;
+					});
+
+				})
+			</script>
+
+	</body>
+</html>
